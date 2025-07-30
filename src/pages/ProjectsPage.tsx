@@ -155,7 +155,8 @@ function ProjectsPage() {
                                 <DialogTitle>Stock Tracker (WeBelieve)</DialogTitle>
                                 </DialogHeader>
                                 <div className="overflow-y-auto px-4 py-3 grow">
-                                    As an introduction to proper software engineering, me and my partner made a stock tracking mobile application to not only get ourselves more familiar with programming and proper software engineering methodologies, 
+                                    As an introduction to proper software engineering, me and my partner made a stock tracking mobile application to not only get ourselves more familiar with programming and proper software engineering methodologies, but also as a fun project to work on. We tried going with a different language framework and language to gain more
+                                    experience and have more exposure.
                                 </div>
                                 <DialogFooter className="shrink-0 border-t px-4 py-3 flex justify-end gap-2">
                                     <PictureCarousel images={[OrbitalPic, OrbitalPic2]}></PictureCarousel>

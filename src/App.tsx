@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router';
+import { createHashRouter, RouterProvider } from 'react-router';
 
 import BaseLayout from './components/BaseLayout.tsx';
 import HomePage from './pages/HomePage.tsx';
@@ -11,7 +11,7 @@ import NotFoundPage from './pages/NotFoundPage.tsx'; // Your 404 page
 
 import './App.css'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <BaseLayout />,

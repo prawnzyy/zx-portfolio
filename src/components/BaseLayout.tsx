@@ -7,6 +7,7 @@ import { MarkGithubIcon } from '@primer/octicons-react';
 import { FaLinkedin, FaHome, FaUser, FaPlane, FaList } from 'react-icons/fa';
 import reactLogo from "@/assets/react.svg";
 import typeScriptLogo from "@/assets/Typescript.svg"
+import viteLogo from "@/assets/vite.svg";
 
 function BaseLayout() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,7 +76,7 @@ function BaseLayout() {
             <a className='cursor-pointer' target="_blank" href="https://www.linkedin.com/in/seah-zi-xiang-a8500028b/"><FaLinkedin size={20}/></a>
         </div>
         <div className='flex flex-row w-screen text-center justify-center gap-4 mb-3'>
-            Built with: <span><img src={reactLogo}></img></span> <span><img src="/vite.svg"></img></span> <span><img src={typeScriptLogo} width={32}></img></span>
+            Built with: <span><img src={reactLogo}></img></span> <span><img src={viteLogo}></img></span> <span><img src={typeScriptLogo} width={32}></img></span>
         </div>
         <p>&copy; 2025 Seah Zi Xiang's Website</p>
       </footer>
