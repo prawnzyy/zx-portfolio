@@ -33,6 +33,7 @@ function BaseLayout() {
           </nav>
           <button
           className="ms-auto sm:hidden block py-2 px-3 text-black"
+          aria-label='Main menu button'
           onClick={() => setIsOpen(!isOpen)}
           > <Menu size={20}/></button>
         </div>
@@ -72,11 +73,11 @@ function BaseLayout() {
 
       <footer className='py-6 bg-blue-600 text-white flex flex-col'>
         <div className='flex flex-row w-screen text-center justify-center gap-4 mb-3'>
-            <a className='cursor-pointer' target="_blank" href="https://github.com/prawnzyy"><MarkGithubIcon size={20}/></a>
-            <a className='cursor-pointer' target="_blank" href="https://www.linkedin.com/in/seah-zi-xiang-a8500028b/"><FaLinkedin size={20}/></a>
+            <a aria-label="Github" className='cursor-pointer' target="_blank" href="https://github.com/prawnzyy"><MarkGithubIcon size={20}/></a>
+            <a aria-label="LinkedIn" className='cursor-pointer' target="_blank" href="https://www.linkedin.com/in/seah-zi-xiang-a8500028b/"><FaLinkedin size={20}/></a>
         </div>
         <div className='flex flex-row w-screen text-center justify-center gap-4 mb-3'>
-            Built with: <span><img src={reactLogo}></img></span> <span><img src={viteLogo}></img></span> <span><img src={typeScriptLogo} width={32}></img></span>
+            Built with: <span><img src={reactLogo} alt="React Logo"></img></span> <span><img src={viteLogo} alt="Vite Logo"></img></span> <span><img src={typeScriptLogo} alt="TypeScript Logo" width={32}></img></span>
         </div>
         <p>&copy; 2025 Seah Zi Xiang's Website</p>
       </footer>
