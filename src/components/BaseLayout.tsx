@@ -5,6 +5,8 @@ import { Outlet, Link } from 'react-router';
 import ScrollToTop from './ScrollToTop';
 import { MarkGithubIcon } from '@primer/octicons-react';
 import { FaLinkedin, FaHome, FaUser, FaPlane, FaList } from 'react-icons/fa';
+import ProgressBar from './TopProgressBar';
+import { scrollProgress } from '@/hooks/scrollProgress';
 import reactLogo from "@/assets/react.svg";
 import typeScriptLogo from "@/assets/Typescript.svg"
 import viteLogo from "@/assets/vite.svg";
@@ -14,6 +16,7 @@ function BaseLayout() {
   return (
     <>
     <ScrollToTop />
+    <ProgressBar progress={scrollProgress()}></ProgressBar>
     <div className='flex flex-col h-full relative overflow-visible'>
       <header className='bg-blue-600 text-white w-full sticky top-0 z-100'>
         <div className='container mx-auto space-y-4 w-full sm:py-5 px-12 py-3'>

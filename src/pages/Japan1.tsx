@@ -105,7 +105,7 @@ function Japan1 () {
                         <PictureCarousel images={[nara1, nara2, fushimi1, fushimi2, fushimi3, fushimi4, curry]} forBlog={true}/>
                     </BlogSection>
                     <BlogSection title="Day 7: Climbing Mount Hiei and getting lost?">
-                        We started off the day first off thinking of how to scale Mount Hiei. Our idea at the start was to be able to have a good view of Lake Biwa. So wwe took the eizan tram halfway up the mountain before attempting to hike the rest of the way up. However, as we walked around, what we eventually realised
+                        We started off the day first off thinking of how to scale Mount Hiei. Our idea at the start was to be able to have a good view of Lake Biwa. So we took the eizan tram halfway up the mountain before attempting to hike the rest of the way up. However, as we walked around, what we eventually realised
                         was that we were actually very far from where we wanted to go, so we decided to just walk and hopefully get somewhere. We did eventually get to a group of shrines, but eventually turned around as we needed to grab lunch soon.
                         <br></br>
                         The rest of the day was not as eventful, we grabbed lunch over at ichiran and rested for most of the day as we were quite worn out.
