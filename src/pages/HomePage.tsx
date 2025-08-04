@@ -19,7 +19,7 @@ function HomePage() {
                         <div className='text-start text-lg mt-3'>Aspiring software engineer specialising in:</div>
                         <div className='font-bold text-start text-lg flex flex-row gap-2'>{RotatingRole()}</div>
                         <br></br>
-                        <Link to="/about" className="btn btn-hover-blue mt-2">About Me!</Link>
+                        <Link to="/about" className="btn btn-hover-blue mt-3">About Me!</Link>
                     </div>
                 </div>
             </CustomSection>

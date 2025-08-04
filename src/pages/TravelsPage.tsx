@@ -5,6 +5,7 @@ import CustomSection from "../components/CustomSection";
 import TravelPic from "../assets/images/home_travel.jpg";
 import TravelPic2 from "../assets/images/dec-2024-1.jpg";
 import TravelPic3 from "../assets/images/dec-2024-2.jpg";
+import TravelPic4 from "@/assets/images/dec-2024-3.jpg"
 
 import Aug20241 from "../assets/images/aug-2024-1.jpg";
 import Aug20242 from "../assets/images/aug-2024-2.jpg";
@@ -82,10 +83,10 @@ function TravelsPage() {
                                 <span className="fi fi-jp"></span> Aug 2024
                             </TabsTrigger>
                         </TabsList>
-                        <TabsContent value="dec-2024">
+                        <TabsContent value="dec-2024" className={tab === "dec-2024" ? "" : "hidden"} forceMount>
                             <div className='mx-auto flex flex-col sm:flex-row gap-4 py-4'>
                                 <div className='w-full sm:w-1/2'>
-                                    <PictureCarousel images={[TravelPic, TravelPic2, TravelPic3]} forBlog={false}>
+                                    <PictureCarousel images={[TravelPic4, TravelPic2, TravelPic3]} forBlog={false}>
                                     </PictureCarousel>
                                 </div>
                                 <div className="w-full sm:w-1/2 m-auto">
@@ -96,7 +97,7 @@ function TravelsPage() {
                                 </div>
                             </div>
                         </TabsContent>
-                        <TabsContent value="sep-2024">
+                        <TabsContent value="sep-2024" className={tab === "sep-2024" ? "" : "hidden"} forceMount>
                             <div className='mx-auto flex flex-col sm:flex-row gap-4 py-4'>
                                 <div className='w-full sm:w-1/2'>
                                     <PictureCarousel images={[Sep1, Sep2, Sep3, Sep4]} forBlog={false}>
@@ -111,7 +112,7 @@ function TravelsPage() {
                                 </div>
                             </div>
                         </TabsContent>
-                        <TabsContent value="aug-2024">
+                        <TabsContent value="aug-2024" className={tab === "aug-2024" ? "" : "hidden"} forceMount>
                             <div className='mx-auto flex flex-col sm:flex-row gap-4 py-4'>
                                 <div className='w-full sm:w-1/2'>
                                     <PictureCarousel images={[Aug20241, Aug20242, Aug20243]} forBlog={false}>

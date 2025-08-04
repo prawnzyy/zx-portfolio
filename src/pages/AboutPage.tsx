@@ -2,6 +2,9 @@ import CustomSection from "@/components/CustomSection";
 import HomePic from "../assets/images/home_about.jpg";
 import Timeline from "@/components/ui/timeline";
 import { Separator } from "@/components/ui/separator"
+import scrollWithPadding from "@/hooks/scrollWithPadding";
+import { Book, Gamepad } from "lucide-react";
+import { PiRacquet } from "react-icons/pi";
 import NUS from "@/assets/nus_logo.jpg";
 import UW from "@/assets/uwaterloo_logo.jpg";
 import HC from "@/assets/hc_logo.jpg"
@@ -30,14 +33,6 @@ function AboutPage() {
         },
     ]
 
-    function scrollWithPadding(id:string, offset = 20) {
-        const target = document.getElementById(id);
-        const targetPosition = Number(target?.getBoundingClientRect().top) - offset + window.scrollY;
-        window.scrollTo({
-            top: targetPosition - offset,
-            behavior: 'smooth'
-        });
-    }
     return (
         <div className="flex flex-col">
             <CustomSection>
@@ -45,8 +40,15 @@ function AboutPage() {
                     <img src={HomePic} alt="About me" className="max-h-[350px] justify-self-center"/>
                 </div>
                 <div className="w-full sm:w-1/2 order-2 sm:order-1 m-auto">
-                    Once again, I am Zi Xiang, an aspiring software engineer currently studying computer science. This website's main intention is just a way to showcase myself, but also as a form of personal blog
-                    to see how far I have come and the things I have done over the years. Click the buttons below to be directed to the various sections
+                    Once again, I am Zi Xiang, an aspiring software engineer currently studying computer science.
+                    <br></br>
+                    Throughout the years, I have picked up a few hobbies, which include:
+                    <ul className="list-disc w-fit justify-self-center text-start mb-4">
+                        <li><PiRacquet className="me-1 inline" size={20}/>Badminton</li>
+                        <li><Gamepad className="me-1 inline" width={20}/>Video Games</li>
+                        <li><Book className="me-1 inline" width={20}/>Manga</li>
+                    </ul>
+                    Click the buttons below to find out more about more experiences and education.
                     <br></br>
                     <button className="btn btn-hover-blue mt-2 me-2" onClick={
                         () => scrollWithPadding('experiences')

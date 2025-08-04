@@ -19,7 +19,7 @@ function BaseLayout() {
     <ProgressBar progress={scrollProgress()}></ProgressBar>
     <div className='flex flex-col h-full relative overflow-visible'>
       <header className='bg-black text-white w-full sticky top-0 z-100'>
-        <div className='container mx-auto space-y-4 w-full sm:py-5 px-12 py-3'>
+        <div className='container mx-auto space-y-4 w-full sm:py-5 sm:px-12 py-3 px-8'>
           <nav className="flex-row gap-4 w-full sm:flex hidden mb-0">
             <Link to="/" onClick={() => setIsOpen(false)} className="block hover:text-grey-800">
               <div className='flex flex-row justify-center items-center'><FaHome className='me-1'/> Home</div>
@@ -53,7 +53,7 @@ function BaseLayout() {
           className={`fixed top-0 left-0 h-full w-50 bg-black shadow-lg z-103 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'
             }`}
         >
-          <nav className="p-6 space-y-4 text-gray-800 font-medium">
+          <nav className="py-6 px-4 space-y-4 text-gray-800 font-medium">
             <Link to="/" onClick={() => setIsOpen(false)} className="block hover:text-blue-500">
               <div className='flex flex-row justify-center items-center'><FaHome className='me-1'/> Home</div>
             </Link>
