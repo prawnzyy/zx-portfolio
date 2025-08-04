@@ -49,13 +49,18 @@ section:nth-child(odd) {
   color: white;
 }
 
+.btn-hover-yellow:hover:not(:disabled) {
+  border-color: transparent;
+  background-color: #FFC107;
+}
+
 a {
-  color: white;
+  color: gray;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: black;
+  color: white;
 }
 
 /*---break---*/

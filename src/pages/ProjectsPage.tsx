@@ -9,10 +9,12 @@ import OrbitalPic from "@/assets/images/projects/we-believe.png"
 import OrbitalPic2 from "@/assets/images/projects/orbital.png"
 
 import BakingBread from "@/assets/images/projects/bakingbreadUi.png"
+import BBLogo from "@/assets/images/projects/bb.png"
+
+import { File } from "lucide-react";
 
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardFooter,
@@ -207,6 +209,8 @@ function ProjectsPage() {
                                         Made as part of our introduction to software engineering module, it was a way for us to not only learn basic software engineering principles, but also get us used to working in a team setting.
                                         <br></br><br></br>
                                         While the project could have morphed into many other possibilities, we decided to attempt a recipe and ingredient storage system as someone on our team was an avid baker and thus the name [Ba]king [Br]ead as well.
+                                        <br></br>
+                                        <a className="btn btn-hover-blue self-center my-3" target="_blank" href="https://ay2324s1-cs2103t-f10-3.github.io/tp/"><File className="inline me-2"></File>Documentation</a>
                                     </div>
                                     <DialogFooter className="shrink-0 border-t px-4 py-3 flex justify-end gap-2">
                                     </DialogFooter>
@@ -216,6 +220,31 @@ function ProjectsPage() {
                         <CardFooter className="gap-3 flex flex-row flex-wrap">
                             {
                                 ['Java', 'JUnit', 'JavaFx'].map((tech) => {
+                                    return(
+                                    <Badge
+                                        key={tech}
+                                        variant="secondary"
+                                        className="rounded-full"
+                                        >
+                                        {tech}
+                                    </Badge>
+                                )})
+                            }
+                        </CardFooter>
+                    </Card>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="relative font-bold text-lg mb-2 text-center mx-auto w-full self-center">Bumblebee Autonomous System (Website Developer)
+                            </CardTitle>
+                            <CardDescription><img src={BBLogo}></img></CardDescription>
+                        </CardHeader>
+                        <CardContent className="mb-3">
+                            <p>While in school, I was also Bumblebee Autonomous System's Website Developer and Maintainer, an extra curricular activity (CCA) in NUS. My job was to design a new page for each competition featuring various aspects of the robot being used and showcased at the competition. Developed the pages from <span className="font-bold">2024-2025</span></p>
+                            <a className="btn btn-hover-yellow my-3" target="_blank" href="https://bumblebee.sg/">Head to Website!</a>
+                        </CardContent>
+                        <CardFooter className="gap-3 flex flex-row flex-wrap">
+                            {
+                                ['JavaScript', 'Hugo', 'ROS 2'].map((tech) => {
                                     return(
                                     <Badge
                                         key={tech}

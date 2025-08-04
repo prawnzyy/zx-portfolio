@@ -49,11 +49,11 @@ function AboutPage() {
                     to see how far I have come and the things I have done over the years. Click the buttons below to be directed to the various sections
                     <br></br>
                     <button className="btn btn-hover-blue mt-2 me-2" onClick={
-                        () => scrollWithPadding('education')
-                        }>Education</button>
-                    <button className="btn btn-hover-blue mt-2" onClick={
                         () => scrollWithPadding('experiences')
                         }>Experiences</button>
+                    <button className="btn btn-hover-blue mt-2" onClick={
+                        () => scrollWithPadding('education')
+                        }>Education</button>
                 </div>
             </CustomSection>
             <CustomSection id="experiences">

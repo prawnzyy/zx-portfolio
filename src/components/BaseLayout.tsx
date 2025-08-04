@@ -18,7 +18,7 @@ function BaseLayout() {
     <ScrollToTop />
     <ProgressBar progress={scrollProgress()}></ProgressBar>
     <div className='flex flex-col h-full relative overflow-visible'>
-      <header className='bg-blue-600 text-white w-full sticky top-0 z-100'>
+      <header className='bg-black text-white w-full sticky top-0 z-100'>
         <div className='container mx-auto space-y-4 w-full sm:py-5 px-12 py-3'>
           <nav className="flex-row gap-4 w-full sm:flex hidden mb-0">
             <Link to="/" onClick={() => setIsOpen(false)} className="block hover:text-grey-800">
@@ -41,7 +41,7 @@ function BaseLayout() {
           > <Menu size={20}/></button>
         </div>
       </header>
-      <div className="relative z-50">
+      <div className="relative z-101">
         {isOpen && (
           <div
             className="fixed inset-0 bg-opacity-10 z-40"
@@ -50,7 +50,7 @@ function BaseLayout() {
         )}
 
         <div
-          className={`fixed top-0 left-0 h-full w-50 bg-blue-600 shadow-lg z-50 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+          className={`fixed top-0 left-0 h-full w-50 bg-black shadow-lg z-103 transform transition-transform duration-300 ${isOpen ? 'translate-x-0' : '-translate-x-full'
             }`}
         >
           <nav className="p-6 space-y-4 text-gray-800 font-medium">
@@ -74,13 +74,13 @@ function BaseLayout() {
         <Outlet /> {/* This is where the child route's element will be rendered */}
       </main>
 
-      <footer className='py-6 bg-blue-600 text-white flex flex-col'>
+      <footer className='py-6 bg-black text-white flex flex-col'>
         <div className='flex flex-row w-screen text-center justify-center gap-4 mb-3'>
-            <a aria-label="Github" className='cursor-pointer' target="_blank" href="https://github.com/prawnzyy"><MarkGithubIcon size={20}/></a>
-            <a aria-label="LinkedIn" className='cursor-pointer' target="_blank" href="https://www.linkedin.com/in/seah-zi-xiang-a8500028b/"><FaLinkedin size={20}/></a>
+            <a aria-label="Github" className='cursor-pointer' target="_blank" href="https://github.com/prawnzyy"><MarkGithubIcon size={28}/></a>
+            <a aria-label="LinkedIn" className='cursor-pointer' target="_blank" href="https://www.linkedin.com/in/seah-zi-xiang-a8500028b/"><FaLinkedin size={28}/></a>
         </div>
         <div className='flex flex-row w-screen text-center justify-center gap-4 mb-3'>
-            Built with: <span><img src={reactLogo} alt="React Logo"></img></span> <span><img src={viteLogo} alt="Vite Logo"></img></span> <span><img src={typeScriptLogo} alt="TypeScript Logo" width={32}></img></span>
+            Built with: <span><img src={reactLogo} alt="React Logo" width={26}></img></span> <span><img src={viteLogo} alt="Vite Logo" width={26}></img></span> <span><img src={typeScriptLogo} alt="TypeScript Logo" width={26}></img></span>
         </div>
         <p>&copy; 2025 Seah Zi Xiang's Website</p>
       </footer>
