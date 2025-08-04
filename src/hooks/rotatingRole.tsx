@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Cog, FileImage, Database } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function rotatingRole() {
     const roles = ["Software Engineering",  "Database Management",  "Computer Graphics"]
@@ -17,7 +18,20 @@ export default function rotatingRole() {
     }, []);
 
     return (<>
-        <span>{icons[role]}</span>
-        <span>{roles[role]}</span>
+    <AnimatePresence>
+        <motion.div
+          key={role}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.5 }}
+          className="absolute"
+        >
+          <div className="flex items-center gap-2">
+            <span>{icons[role]}</span>
+            <span>{roles[role]}</span>
+          </div>
+        </motion.div>
+      </AnimatePresence>
     </>);
 }

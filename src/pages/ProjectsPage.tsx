@@ -44,7 +44,7 @@ function ProjectsPage() {
             </div>
             <div className="w-full sm:w-1/2 order-2 sm:order-1 m-auto">
                 While this website is technically also one of the projects that I have worked on, there are also a few others that I have done over the past few years, be it for school work or for
-                internships. Click on the various cards belows for more information
+                internships. Click on the various cards below for more information
                 <br></br>
             </div>
         </CustomSection>
