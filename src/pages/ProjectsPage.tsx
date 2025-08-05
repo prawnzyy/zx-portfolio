@@ -58,7 +58,7 @@ function ProjectsPage() {
                             <CardDescription><img src={ProjectPic}></img></CardDescription>
                         </CardHeader>
                         <CardContent className="mb-3">
-                            <p className="text-start">Designed and created when I was interning under National University of Singapore Graduate School (NUSGS). Was designed with ease of use in mind and to alleviate development team's load for menial tasks</p>
+                            <p className="text-start">Designed and created when I was interning under National University of Singapore Graduate School (NUSGS). Was designed with ease of use in mind and to alleviate development team's load for menial tasks.</p>
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <button className="btn btn-hover-blue mt-3">Find out more!</button>
@@ -102,7 +102,7 @@ function ProjectsPage() {
                             <CardDescription><img src={PortalPic}></img></CardDescription>
                         </CardHeader>
                         <CardContent className="mb-3">
-                            <p className="text-start">Aided in the development of this portal when interning at NUSGS. The main use of this project was for Graduate students to have a platform for them to better showcase their achievements and research. It is also intended for employers to be able to reach out to these students</p>
+                            <p className="text-start">Aided in the development of this portal when interning at NUSGS. The main use of this project was for Graduate Students to have a platform for them to better showcase their achievements and research. It is also intended for employers to be able to reach out to these students.</p>
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <button className="btn btn-hover-blue mt-3">Find out more!</button>
@@ -152,7 +152,7 @@ function ProjectsPage() {
                             <CardDescription><img src={OrbitalPic}></img></CardDescription>
                         </CardHeader>
                         <CardContent className="mb-3">
-                            <p className="text-start">Developed a stock tracker and viewing mobile application as part of a school module. The main use was for people to have a central location to be able to discuss topics related to stocks and also have a way to keep track of them. Stock values are also looked up at real time using API</p>
+                            <p className="text-start">Developed a stock tracker and viewing mobile application as part of a school module. The main use was for people to have a central location to be able to discuss topics related to stocks and also have a way to keep track of them. Stock values are also looked up at real time using API.</p>
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <button className="btn btn-hover-blue mt-3">Find out more!</button>
@@ -196,7 +196,7 @@ function ProjectsPage() {
                             <CardDescription><img src={BakingBread}></img></CardDescription>
                         </CardHeader>
                         <CardContent className="mb-3">
-                            <p className="text-start">A simple java project made by 5 students. It is made as part of our introduction to software engineering module where we learnt basic concepts such as SOLID.</p>
+                            <p className="text-start">A simple java project made by 5 students. It is made as part of our introduction to software engineering module where we learnt basic concepts and put them into practice.</p>
                             <Dialog>
                                 <DialogTrigger asChild>
                                     <button className="btn btn-hover-blue mt-3">Find out more!</button>

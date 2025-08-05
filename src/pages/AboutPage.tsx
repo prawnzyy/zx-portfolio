@@ -5,6 +5,8 @@ import { Separator } from "@/components/ui/separator"
 import scrollWithPadding from "@/hooks/scrollWithPadding";
 import { Book, Gamepad } from "lucide-react";
 import { PiRacquet } from "react-icons/pi";
+import GraduateLogo from "@/assets/graduate_school_logo.jpg";
+import NullspaceLogo from "@/assets/nullspace_robotics_logo.jpg"
 import NUS from "@/assets/nus_logo.jpg";
 import UW from "@/assets/uwaterloo_logo.jpg";
 import HC from "@/assets/hc_logo.jpg"
@@ -40,7 +42,8 @@ function AboutPage() {
                     <img src={HomePic} alt="About me" className="max-h-[350px] justify-self-center"/>
                 </div>
                 <div className="w-full sm:w-1/2 order-2 sm:order-1 m-auto">
-                    Once again, I am Zi Xiang, an aspiring software engineer currently studying computer science.
+                    <div className="font-bold underline text-xl mb-3">About</div>
+                    Once again, I am Zi Xiang, an aspiring software engineer currently studying Computer Science.
                     <br></br>
                     Throughout the years, I have picked up a few hobbies, which include:
                     <ul className="list-disc w-fit justify-self-center text-start mb-4">
@@ -63,6 +66,7 @@ function AboutPage() {
                     <h3 className="text-center w-full font-bold underline text-xl">Experiences</h3>
                     <Timeline timelineObjs={[
                         {
+                            logo: GraduateLogo,
                             title : "Software Developer (Intern)", 
                             company : "National University of Singapore Graduate School", 
                             period : "January 2025 - July 2025", 
@@ -70,6 +74,7 @@ function AboutPage() {
                             technologies: ["JavaScript", "PHP", "MySQL", "Wordpress", "JSON Web Token (JWT)"]
                         }, 
                         {
+                            logo: NullspaceLogo,
                             title : "Instructor (Intern)", 
                             company : "Nullspace Robotics", 
                             period : "December 2021 - June 2022", 

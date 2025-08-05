@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Building2, Calendar } from "lucide-react";
 
 type TimelineObj = {
+  logo: string;
   title: string;
   company: string;
   period: string;
@@ -21,7 +22,7 @@ function Timeline({ timelineObjs } : TimelineProps) {
         <div className="absolute left-0 top-4 bottom-0 border-l-2" />
 
         {timelineObjs.map(
-          ({ company, description, period, title, technologies }, index) => (
+          ({ company, description, period, title, technologies, logo }, index) => (
             <div key={index} className="relative pl-5 sm:pl-8 pb-8 sm:pb-12 last:pb-0">
               {/* Timeline dot */}
               <div className="absolute h-3 w-3 -translate-x-1/2 left-px top-3 rounded-full border-2 border-primary bg-background" />
@@ -30,7 +31,7 @@ function Timeline({ timelineObjs } : TimelineProps) {
               <div className="space-y-3">
                 <div className="flex items-center gap-1 sm:gap-3">
                   <div className="flex-shrink-0 h-9 w-9 bg-accent rounded-full flex items-center justify-center">
-                    <Building2 className="h-5 w-5 text-muted-foreground" />
+                    <img src={logo}></img>
                   </div>
                   <span className="text-base sm:text-lg font-semibold">
                     {company}
