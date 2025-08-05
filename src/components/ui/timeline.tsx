@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Building2, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 type TimelineObj = {
   logo: string;

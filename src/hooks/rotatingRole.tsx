@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Cog, FileImage, Database } from 'lucide-react';
+import { Cog, Database } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 export default function rotatingRole() {
