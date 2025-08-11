@@ -51,7 +51,7 @@ function ProjectsPage() {
         <CustomSection>
             <div>
                 <div className="underline font-bold mb-6 text-2xl">My Projects</div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4">
+                <div className="projects-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-4">
                     <Card>
                         <CardHeader>
                             <CardTitle className="font-bold text-lg mb-2">Webpage Generator</CardTitle>

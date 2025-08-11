@@ -70,7 +70,7 @@ function BaseLayout() {
         </div>
       </div>
 
-      <main>
+      <main className='flex-grow'>
         <Outlet /> {/* This is where the child route's element will be rendered */}
       </main>
 
