@@ -107,8 +107,8 @@ function TravelsPage() {
                                     Taking part in the Student Exchange Program (SEP) was really an experience. While it was located in Waterloo, Canada for me, I also did travel around the country and even travelled 
                                     out of the country and to USA as well. The highlights of this 4 month journey are showcased in the link below.
                                     <br></br>
-                                    {/* <Link to="./sep-2024" className="btn btn-hover-blue mt-2">Find out more</Link> */}
-                                    <button className="btn btn-hover-blue mt-2" disabled>Coming Soon</button>
+                                    <Link to="./sep-2024" className="btn btn-hover-blue mt-2">Find out more</Link>
+                                    {/* <button className="btn btn-hover-blue mt-2" disabled>Coming Soon</button> */}
                                 </div>
                             </div>
                         </TabsContent>
@@ -121,8 +121,8 @@ function TravelsPage() {
                                 <div className="w-full sm:w-1/2 m-auto">
                                     Before heading off for SEP, a few of us decided to stop by Japan and do a quick one week trip before finally heading over to Canada to start our exchange program.
                                     <br></br>
-                                    {/* <Link to="./aug-2024" className="btn btn-hover-blue mt-2">Find out more</Link> */}
-                                    <button className="btn btn-hover-blue mt-2" disabled>Coming Soon</button>
+                                    <Link to="./aug-2024" className="btn btn-hover-blue mt-2">Find out more</Link>
+                                    {/* <button className="btn btn-hover-blue mt-2" disabled>Coming Soon</button> */}
                                 </div>
                             </div>
                         </TabsContent>

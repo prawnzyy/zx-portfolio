@@ -7,11 +7,11 @@ import {
 } from "@/components/ui/carousel"
 
 type PictureCarouselProps = {
-    images: string[];
+    images?: string[];
     forBlog?: boolean;
 };
 
-function PictureCarousel({images, forBlog=false} : PictureCarouselProps) {
+function PictureCarousel({images=[], forBlog=false} : PictureCarouselProps) {
     const itemClass = forBlog ? "md:basis-1/2 lg:basis-1/3 pt-5" : "";
     return (
         <Carousel className="relative">

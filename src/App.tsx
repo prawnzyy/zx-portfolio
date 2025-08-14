@@ -11,6 +11,7 @@ import SEP from '@/pages/SEP.tsx';
 import NotFoundPage from './pages/NotFoundPage.tsx'; // Your 404 page
 
 import './App.css'
+import Japan2 from './pages/Japan2.tsx';
 
 const router = createHashRouter([
   {
@@ -44,6 +45,10 @@ const router = createHashRouter([
           {
             path: 'sep-2024',
             element: <SEP />
+          },
+          {
+            path: 'aug-2024',
+            element: <Japan2 />
           }
         ]
       },
