@@ -53,7 +53,7 @@ import BlogSection from "@/components/BlogSection";
 function Japan1 () {
     return (
         <>
-            <div className="container mx-auto">
+            <div className="container mx-auto bg-white">
                 <div className="flex flex-col justify-center">
                     <div className="text-3xl bold font-semibold py-4">Back in Japan</div>
                     <div>24th Dec - 2nd Jan</div>

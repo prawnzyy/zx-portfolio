@@ -35,7 +35,7 @@ function BaseLayout() {
             </Link>
           </nav>
           <button
-          className="ms-auto sm:hidden block py-2 px-3 text-black"
+          className="ms-auto sm:hidden block py-2 px-3 text-white border-white border"
           aria-label='Main menu button'
           onClick={() => setIsOpen(!isOpen)}
           > <Menu size={20}/></button>
@@ -70,7 +70,7 @@ function BaseLayout() {
         </div>
       </div>
 
-      <main className='flex-grow'>
+      <main className='flex-grow bg-white'>
         <Outlet /> {/* This is where the child route's element will be rendered */}
       </main>
 
