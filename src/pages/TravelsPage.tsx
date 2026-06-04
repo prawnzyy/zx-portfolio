@@ -16,6 +16,12 @@ import Sep2 from "../assets/images/sep-2.jpg";
 import Sep3 from "../assets/images/sep-3.jpg";
 import Sep4 from "../assets/images/sep-4.jpg";
 
+import GradJap1 from "../assets/images/grad-japan/Map_Tokyo.jpg";
+import GradJap2 from "../assets/images/grad-japan/Map_Gujo.jpg";
+import GradJap3 from "../assets/images/grad-japan/Map_Kyoto.jpg";
+import GradJap4 from "../assets/images/grad-japan/Map_Hiroshima.jpg";
+import GradJap5 from "../assets/images/grad-japan/Map_Ehime.jpg";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import PictureCarousel from "@/components/PictureCarousel";
 
@@ -59,6 +65,9 @@ function TravelsPage() {
                             </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent>
+                            <DropdownMenuItem onClick={() => setTab("may-2026")}>
+                                <span className="fi fi-jp"></span> Grad Japan 2026
+                            </DropdownMenuItem>
                             <DropdownMenuItem onClick={() => setTab("dec-2024")}>
                                 <span className="fi fi-jp"></span> Dec 2024
                             </DropdownMenuItem>
@@ -73,6 +82,9 @@ function TravelsPage() {
                     </div>
                     <Tabs defaultValue="dec-2024" value={tab} onValueChange={setTab}>
                         <TabsList className="sm:block hidden">
+                            <TabsTrigger value="may-2026">
+                                <span className="fi fi-jp"></span> Grad Japan 2026
+                            </TabsTrigger>
                             <TabsTrigger value="dec-2024">
                                 <span className="fi fi-jp"></span> Dec 2024
                             </TabsTrigger>
@@ -83,6 +95,19 @@ function TravelsPage() {
                                 <span className="fi fi-jp"></span> Aug 2024
                             </TabsTrigger>
                         </TabsList>
+                        <TabsContent value="may-2026" className={tab === "may-2026" ? "" : "hidden"} forceMount>
+                            <div className='mx-auto flex flex-col sm:flex-row gap-4 py-4'>
+                                <div className='w-full sm:w-1/2'>
+                                    <PictureCarousel images={[GradJap1, GradJap2, GradJap3, GradJap4, GradJap5]} forBlog={false}>
+                                    </PictureCarousel>
+                                </div>
+                                <div className="w-full sm:w-1/2 m-auto">
+                                    Right after exams, we headed straight off for our grad trip to Japan. 
+                                    <br></br>
+                                    <Link to="./may-2026" className="btn btn-hover-blue mt-2">Find out more</Link>
+                                </div>
+                            </div>
+                        </TabsContent>
                         <TabsContent value="dec-2024" className={tab === "dec-2024" ? "" : "hidden"} forceMount>
                             <div className='mx-auto flex flex-col sm:flex-row gap-4 py-4'>
                                 <div className='w-full sm:w-1/2'>

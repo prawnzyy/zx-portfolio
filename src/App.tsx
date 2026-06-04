@@ -7,6 +7,7 @@ import ProjectsPage from './pages/ProjectsPage.tsx';
 import TravelsPage from './pages/TravelsPage.tsx';
 import Japan1 from './pages/Japan1.tsx';
 import SEP from '@/pages/SEP.tsx';
+import GradJapanPage from '@/pages/GradJapan.tsx';
 
 import NotFoundPage from './pages/NotFoundPage.tsx'; // Your 404 page
 
@@ -37,6 +38,10 @@ const router = createHashRouter([
           {
             index: true,
             element: <TravelsPage />
+          },
+          {
+            path: 'may-2026',
+            element: <GradJapanPage />
           },
           {
             path: 'dec-2024',
