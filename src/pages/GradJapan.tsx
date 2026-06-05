@@ -372,8 +372,8 @@ function GradJapanPage() {
         {hovered in paths && paths[hovered] && (
             <div className="flex flex-col items-start" style={{
               position: "absolute", top: 10, left: 10,
-              background: "rgba(0,0,0,0.75)", color: "white",
-              padding: "4px 10px", borderRadius: "6px", pointerEvents: "none"
+              background: "var(--foreground)", color: "var(--background)",
+              padding: "4px 10px", borderRadius: "6px", pointerEvents: "none", opacity: "0.8"
             }}>
               <div>
               {paths[hovered].name}
@@ -381,7 +381,7 @@ function GradJapanPage() {
               <div>
                 {paths[hovered].time_period}
               </div>
-              <div className="flex flex-row items-start pt-1 gap-2">
+              <div className="flex flex-row items-start pt-1 gap-2 pb-1">
                 <img className="w-50 h-auto" src={paths[hovered].imageSrc}/>
                 <ul className="items-start ps-5 list-disc">
                 {paths[hovered].description.map((area) => (
@@ -395,7 +395,7 @@ function GradJapanPage() {
           onClick={handleClick}
           onMouseOver={handleMouseEnter}
           onMouseOut={handleMouseLeave}
-          className="w-full h-auto border border-black rounded-md"
+          className="japangradmap w-full h-auto border rounded-md"
         />
       </div>
     </div>

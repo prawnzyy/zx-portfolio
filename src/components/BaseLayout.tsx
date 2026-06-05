@@ -18,7 +18,7 @@ function BaseLayout() {
     <ScrollToTop />
     <ProgressBar progress={scrollProgress()}></ProgressBar>
     <div className='flex flex-col h-full relative overflow-visible'>
-      <header className='bg-black text-white w-full sticky top-0 z-100'>
+      <header className='topheader w-full sticky top-0 z-100'>
         <div className='container mx-auto space-y-4 w-full sm:py-5 sm:px-12 py-3 px-8'>
           <nav className="flex-row gap-4 w-full sm:flex hidden mb-0">
             <Link to="/" onClick={() => setIsOpen(false)} className="block hover:text-grey-800">
@@ -35,7 +35,7 @@ function BaseLayout() {
             </Link>
           </nav>
           <button
-          className="ms-auto sm:hidden block py-2 px-3 text-white border-white border"
+          className="ms-auto sm:hidden block py-2 px-3 border-white border"
           aria-label='Main menu button'
           onClick={() => setIsOpen(!isOpen)}
           > <Menu size={20}/></button>
@@ -70,11 +70,11 @@ function BaseLayout() {
         </div>
       </div>
 
-      <main className='flex-grow bg-white'>
+      <main className='flex-grow'>
         <Outlet /> {/* This is where the child route's element will be rendered */}
       </main>
 
-      <footer className='py-6 bg-black text-white flex flex-col'>
+      <footer className='btmfooter py-6 flex flex-col'>
         <div className='flex flex-row w-screen text-center justify-center gap-4 mb-3'>
             <a aria-label="Github" className='cursor-pointer' target="_blank" href="https://github.com/prawnzyy"><MarkGithubIcon size={28}/></a>
             <a aria-label="LinkedIn" className='cursor-pointer' target="_blank" href="https://www.linkedin.com/in/seah-zi-xiang-a8500028b/"><FaLinkedin size={28}/></a>

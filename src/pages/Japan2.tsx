@@ -26,7 +26,6 @@ import Koburi4 from "@/assets/images/japan-2/koburi-4.jpg";
 
 export default function Japan2() {
     return(
-        <>
         <div className="container mx-auto">
             <div className="flex flex-col justify-center">
                 <div className="text-3xl bold font-semibold py-4">A quick stopover</div>
@@ -68,6 +67,5 @@ export default function Japan2() {
                 </BlogSection>
             </div>
         </div>
-        </>
     )
 }

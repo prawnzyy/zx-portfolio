@@ -240,7 +240,7 @@ function ProjectsPage() {
                         </CardHeader>
                         <CardContent className="mb-3">
                             <p className="text-start">While in school, I was also Bumblebee Autonomous System's Website Developer and Maintainer, an extra curricular activity (CCA) in NUS. My job was to design a new page for each competition featuring various aspects of the robot being used and showcased at the competition. Developed the pages from <span className="font-bold">2024-2025</span></p>
-                            <a className="btn btn-hover-yellow my-3" target="_blank" href="https://bumblebee.sg/">Head to Website!</a>
+                            <a className="btn btn-hover-blue my-3" target="_blank" href="https://bumblebee.sg/">Head to Website!</a>
                         </CardContent>
                         <CardFooter className="gap-3 flex flex-row flex-wrap">
                             {
