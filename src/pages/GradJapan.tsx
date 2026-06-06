@@ -9,7 +9,7 @@ import {
     CardHeader,
 } from "@/components/ui/card"
 
-import { ArrowBigDown } from "lucide-react";
+import { ArrowBigDown, ArrowBigUp } from "lucide-react";
 
 import JapanMap from "../assets/images/grad-japan/jp_1.svg?react";
 import MapTokyo from "../assets/images/grad-japan/Map_Tokyo.jpg";
@@ -367,7 +367,7 @@ function GradJapanPage() {
       View the map below to see where we went and what we did!
       <ArrowBigDown />
     </div>
-    <div className="w-full items-center justify-center md:block hidden">
+    <div className="w-full items-center justify-center md:visible invisible md:h-auto h-0">
       <div ref={containerRef} className="h-[500px] flex justify-center relative">
         {hovered in paths && paths[hovered] && (
             <div className="flex flex-col items-start" style={{
@@ -401,7 +401,7 @@ function GradJapanPage() {
     </div>
     <div className="mt-5 self-start w-full scroll-mt-20" ref={jumpTargetRef}>
       <Tabs defaultValue="JP13" value={selected} onValueChange={setSelected}>
-        <TabsList className="md:hidden block">
+        <TabsList className="md:hidden flex flex-wrap self-center h-auto gap-1 bg-[#787276]">
           <TabsTrigger value="JP13">
             Tokyo
           </TabsTrigger>
@@ -418,6 +418,15 @@ function GradJapanPage() {
             Ehime
           </TabsTrigger>
         </TabsList>
+        {selected === "" && (
+          <div className="flex flex-row gap-2 self-center md:hidden">
+            <ArrowBigUp />
+            <div>
+              Click on one of the tabs to see what we did there!
+            </div>
+            <ArrowBigUp />
+          </div>
+        )}
         {Object.keys(day_content).map((key) => (
           <TabsContent value={key} className={selected === key ? "w-full" : "w-full hidden"} forceMount>
             <div className="pb-6 font-bold underline text-xl">

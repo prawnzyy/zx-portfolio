@@ -38,7 +38,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
 function TravelsPage() {
-    const [tab, setTab] = useState("dec-2024");
+    const [tab, setTab] = useState("may-2026");
 
     return (
         <div className="flex flex-col">
@@ -80,7 +80,7 @@ function TravelsPage() {
                         </DropdownMenuContent>
                     </DropdownMenu>
                     </div>
-                    <Tabs defaultValue="dec-2024" value={tab} onValueChange={setTab}>
+                    <Tabs defaultValue="may-2026" value={tab} onValueChange={setTab}>
                         <TabsList className="sm:block hidden">
                             <TabsTrigger value="may-2026">
                                 <span className="fi fi-jp"></span> Grad Japan 2026
@@ -102,7 +102,7 @@ function TravelsPage() {
                                     </PictureCarousel>
                                 </div>
                                 <div className="w-full sm:w-1/2 m-auto">
-                                    Right after exams, we headed straight off for our grad trip to Japan. 
+                                    Right after the exams were over, we headed straight to Japan for a 2 week Grad Trip that would actually span a decent portion of Japan.
                                     <br></br>
                                     <Link to="./may-2026" className="btn btn-hover-blue mt-2">Find out more</Link>
                                 </div>
