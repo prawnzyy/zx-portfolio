@@ -41,12 +41,13 @@ function TravelsPage() {
     const [tab, setTab] = useState("may-2026");
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
             <CustomSection>
-                <div className='w-full sm:w-1/2 order-1 sm:order-2'>
+                <div className='w-full md:w-1/2 order-1 md:order-2'>
                         <img src={TravelPic} alt="Lake Ashi" className="max-h-[350px] justify-self-center"/>
                     </div>
-                    <div className="w-full sm:w-1/2 order-2 sm:order-1 m-auto">
+                    <div className="w-full md:w-1/2 order-2 md:order-1 m-auto">
+                        <div className="font-bold underline text-xl pb-2">Travels</div>
                         This section contains a summary of each of the trips that I have chosen to showcase. 
                         While some will be displayed in the form of a blog, some may be different due to the difference in length of the trip. 
                         Find out more about each trip below.

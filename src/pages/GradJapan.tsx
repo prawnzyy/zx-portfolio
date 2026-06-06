@@ -7,6 +7,7 @@ import {
     CardContent,
     CardHeader,
 } from "@/components/ui/card"
+import { Spinner } from "@/components/ui/spinner";
 
 import { ArrowBigDown, ArrowBigUp } from "lucide-react";
 
@@ -138,6 +139,7 @@ function GradJapanPage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const jumpTargetRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
+  const [loading, setLoading] = useState(true);
 
   const paths: Record<string, MapData> = {
     JP13 : {name : "Tokyo", time_period: "8-12 May", description: ["Mt Takao", "Enoshima", "Akihabara"], imageSrc: MapTokyo},
@@ -188,8 +190,36 @@ function GradJapanPage() {
     },
   }
 
+  // Add all images to an array to preload
+  const allImages = Object.values(day_content)
+    .flatMap(tab => tab.content?.flatMap(section => section.images))
+    .filter((img): img is string => img !== undefined);
+
+  // Manually add for those in map
+  allImages.push(MapEhime, MapGujo, MapHiroshima, MapKyoto, MapTokyo)
+
+  // Handle preloading of images
+  useEffect(() => {
+    Promise.all(
+      allImages.map(
+        src =>
+          new Promise<void>((resolve) => {
+            const img = new Image();
+
+            img.onload = () => resolve();
+            img.onerror = () => resolve();
+
+            img.src = src;
+          })
+      )
+    ).then(() => {
+      setLoading(false);
+    });
+  }, []);
+
   // Handle coloring and travel lines
   useEffect(() => {
+    if (loading) return
     const container = containerRef.current;
     const svg = container?.querySelector("svg") as SVGSVGElement;
     if (!container || !svg) return;
@@ -285,12 +315,7 @@ function GradJapanPage() {
     return () => {
       d3.select(svg).on(".zoom", null);
     };
-  }, []);
-
-  // Handle Zoom feature using d3
-  useEffect(() => {
-    
-  }, []);
+  }, [loading]);
 
   const handleClick = (e: React.MouseEvent<SVGSVGElement>) => {
     const target = e.target as SVGPathElement;
@@ -359,7 +384,12 @@ function GradJapanPage() {
 
   return (
     <>
-    <section className="lg:w-4/5 xl:w-3/4 2xl:w-7/10 max-w-[1400px] mx-auto flex flex-col items-center justify-center">
+    {loading && 
+      <section className="flex flex-col justify-center items-center self-center flex-grow text-xl xl:text-2xl gap-2">
+        Loading in progress. It may take awhile.
+        <Spinner className="size-6 xl:size-8"></Spinner>
+      </section>}
+    {!loading && <section className="lg:w-4/5 xl:w-3/4 2xl:w-7/10 max-w-[1400px] mx-auto flex flex-col items-center justify-center">
     <div className="text-3xl font-semibold py-4">Grad Trip Japan 2026</div>
     <div className="flex flex-row gap-2 pb-2 font-semibold md:flex hidden">
       <ArrowBigDown />
@@ -448,7 +478,7 @@ function GradJapanPage() {
         ))}
       </Tabs>
     </div>
-    </section>
+    </section>}
     </>
   );
 }

@@ -7,7 +7,7 @@ import RotatingRole from "@/hooks/rotatingRole";
 
 function HomePage() {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
             <CustomSection className='container mx-auto flex flex-col sm:flex-row gap-4 sm:p-4 p-3'>
                 <div className='w-full sm:w-1/2 order-1 sm:order-2 me-auto'>
                     <img src={HomePic} alt="About me" className="max-h-[250px] sm:max-h-[350px] justify-self-center rounded-[50%]"/>
@@ -25,10 +25,10 @@ function HomePage() {
             </CustomSection>
                 
             <CustomSection>
-                <div className='w-full sm:w-1/2'>
+                <div className='w-full md:w-1/2'>
                     <img src={ProjectPic} alt="Create a Webpage" className="max-h-[350px] justify-self-center"/>
                 </div>
-                <div className="w-full sm:w-1/2 m-auto">
+                <div className="w-full md:w-1/2 m-auto">
                     As a Computer Science Student, I have done quite a few projects, be it for school modules or as part of my internship. I have selected a few more notable ones and they are being showcased. Click the button below to find out more.
                     <br></br>
                     <Link to="/projects" className="btn btn-hover-blue mt-2">My projects!</Link>
@@ -36,10 +36,10 @@ function HomePage() {
             </CustomSection>
 
             <CustomSection>
-                <div className='w-full sm:w-1/2 order-1 sm:order-2'>
+                <div className='w-full md:w-1/2 order-1 md:order-2'>
                     <img src={TravelPic} alt="Lake Ashi" className="max-h-[350px] justify-self-center"/>
                 </div>
-                <div className="w-full sm:w-1/2 order-2 sm:order-1 m-auto">
+                <div className="w-full md:w-1/2 order-2 md:order-1 m-auto">
                     I have traveled quite a bit in the past few years, especially during my Student Exchange Program (SEP), where I had to take a full semester of school in a foreign country. I have collated some of my travels and displayed them in the form of blogs.
                     <br></br>
                     <Link to="/travels" className="btn btn-hover-blue mt-2">My travels!</Link>

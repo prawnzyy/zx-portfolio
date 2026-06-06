@@ -36,12 +36,12 @@ function AboutPage() {
     ]
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
             <CustomSection>
-                <div className='w-full sm:w-1/2 order-1 sm:order-2'>
+                <div className='w-full md:w-1/2 order-1 md:order-2'>
                     <img src={HomePic} alt="About me" className="max-h-[350px] justify-self-center"/>
                 </div>
-                <div className="w-full sm:w-1/2 order-2 sm:order-1 m-auto">
+                <div className="w-full md:w-1/2 order-2 md:order-1 m-auto">
                     <div className="font-bold underline text-xl mb-3">About</div>
                     Once again, I am Zi Xiang, an aspiring software engineer currently studying Computer Science.
                     <br></br>

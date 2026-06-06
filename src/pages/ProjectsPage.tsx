@@ -37,12 +37,12 @@ import { MarkGithubIcon } from "@primer/octicons-react";
 
 function ProjectsPage() {
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
         <CustomSection>
-            <div className='w-full sm:w-1/2 order-1 sm:order-2'>
+            <div className='w-full md:w-1/2 order-1 md:order-2'>
                 <img src={ProjectPic} alt="About me" className="max-h-[350px] justify-self-center"/>
             </div>
-            <div className="w-full sm:w-1/2 order-2 sm:order-1 m-auto">
+            <div className="w-full md:w-1/2 order-2 md:order-1 m-auto">
                 While this website is technically also one of the projects that I have worked on, there are also a few others that I have done over the past few years, be it for school work or for
                 internships. Click on the various cards below for more information
                 <br></br>

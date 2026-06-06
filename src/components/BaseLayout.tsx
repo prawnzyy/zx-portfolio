@@ -17,7 +17,7 @@ function BaseLayout() {
     <>
     <ScrollToTop />
     <ProgressBar progress={scrollProgress()}></ProgressBar>
-    <div className='flex flex-col h-full relative overflow-visible'>
+    <div className='flex flex-col h-full relative overflow-visible min-h-screen'>
       <header className='topheader w-full sticky top-0 z-100'>
         <div className='container mx-auto space-y-4 w-full sm:py-5 sm:px-12 py-3 px-8'>
           <nav className="flex-row gap-4 w-full sm:flex hidden mb-0">
@@ -70,7 +70,7 @@ function BaseLayout() {
         </div>
       </div>
 
-      <main className='flex-grow'>
+      <main className='flex-grow flex'>
         <Outlet /> {/* This is where the child route's element will be rendered */}
       </main>
 
@@ -82,7 +82,7 @@ function BaseLayout() {
         <div className='flex flex-row w-screen text-center justify-center gap-4 mb-3'>
             Built with: <span><img src={reactLogo} alt="React Logo" width={26}></img></span> <span><img src={viteLogo} alt="Vite Logo" width={26}></img></span> <span><img src={typeScriptLogo} alt="TypeScript Logo" width={26}></img></span>
         </div>
-        <p>&copy; 2025 Seah Zi Xiang's Website</p>
+        <p>&copy; 2026 Seah Zi Xiang's Website</p>
       </footer>
     </div>
     </>
