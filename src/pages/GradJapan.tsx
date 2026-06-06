@@ -5,7 +5,6 @@ import PictureCarousel from "@/components/PictureCarousel";
 import {
     Card,
     CardContent,
-    CardFooter,
     CardHeader,
 } from "@/components/ui/card"
 
@@ -191,8 +190,34 @@ function GradJapanPage() {
 
   // Handle coloring and travel lines
   useEffect(() => {
-    const svg = svgRef.current;
-    if (!svg) return;
+    const container = containerRef.current;
+    const svg = container?.querySelector("svg") as SVGSVGElement;
+    if (!container || !svg) return;
+
+    svgRef.current = svg;
+
+    const zoom = d3.zoom<SVGSVGElement, unknown>()
+      .scaleExtent([1, 8])
+      .on("zoom", (event) => {
+        const g = svg.querySelector("g");
+        if (g) {
+          d3.select(g).attr("transform", event.transform.toString());
+        } else {
+          // if no <g> wrapper, apply to all children
+          d3.select(svg)
+            .selectAll("path")
+            .attr("transform", event.transform.toString());
+        }
+      });
+
+    d3.select(svg).call(zoom);
+
+    d3.select(svg).call(
+      zoom.transform,
+      d3.zoomIdentity.translate(-1300, -1450).scale(4)
+    );
+    // const svg = svgRef.current;
+    // if (!svg) return;
 
     // Color the visited paths
     Object.keys(paths).forEach((id) => {
@@ -257,40 +282,14 @@ function GradJapanPage() {
         .attr("r", 2)
         .attr("fill", "red");
     });
+    return () => {
+      d3.select(svg).on(".zoom", null);
+    };
   }, []);
 
   // Handle Zoom feature using d3
   useEffect(() => {
-    const container = containerRef.current;
-    const svg = container?.querySelector("svg") as SVGSVGElement;
-    if (!container || !svg) return;
-
-    svgRef.current = svg;
-
-    const zoom = d3.zoom<SVGSVGElement, unknown>()
-      .scaleExtent([1, 8])
-      .on("zoom", (event) => {
-        const g = svg.querySelector("g");
-        if (g) {
-          d3.select(g).attr("transform", event.transform.toString());
-        } else {
-          // if no <g> wrapper, apply to all children
-          d3.select(svg)
-            .selectAll("path")
-            .attr("transform", event.transform.toString());
-        }
-      });
-
-    d3.select(svg).call(zoom);
-
-    d3.select(svg).call(
-      zoom.transform,
-      d3.zoomIdentity.translate(-1300, -1450).scale(4)
-    );
-
-    return () => {
-      d3.select(svg).on(".zoom", null);
-    };
+    
   }, []);
 
   const handleClick = (e: React.MouseEvent<SVGSVGElement>) => {
