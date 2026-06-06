@@ -372,8 +372,8 @@ function GradJapanPage() {
         {hovered in paths && paths[hovered] && (
             <div className="flex flex-col items-start" style={{
               position: "absolute", top: 10, left: 10,
-              background: "var(--foreground)", color: "var(--background)",
-              padding: "4px 10px", borderRadius: "6px", pointerEvents: "none", opacity: "0.8"
+              background: "color-mix(in srgb, var(--foreground) 80%, transparent)", color: "var(--background)",
+              padding: "4px 10px", borderRadius: "6px", pointerEvents: "none"
             }}>
               <div>
               {paths[hovered].name}
