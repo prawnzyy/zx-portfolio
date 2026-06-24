@@ -92,7 +92,7 @@ export default function SEP() {
         },
         {
             date: "25-30 Nov 2024",
-            title: "Montreal & Qucbec",
+            title: "Montreal & Quebec",
             progress: 73.3,
             images: [Quebec1, Quebec2, Quebec3, Quebec4, Quebec5, Quebec6, Quebec7],
             description: "Towards the end of november we headed towards the Quebec Province to visit both Montreal and Quebec. It is a place filled with vintage and old vibes."
@@ -140,9 +140,8 @@ export default function SEP() {
     },
     []
   )
-    
     return (
-        <div className="flex flex-col container justify-self-center items-center mb-4 px-4">
+        <div className="mx-auto flex flex-col items-center mb-4 px-4 max-w-7xl">
             <div className="font-bold text-xl underline my-3">Student Exchange Program (SEP)</div>
             <div className="my-3 w-xs md:w-xl lg:w-4xl items-center">
                 <div className="justify-self-start text-start mb-4 -translate-x-1/2 relative border-2 p-3 rounded-md border-black overflow-hidden" style={{left: `${isMd ? (timelineContent[selected - 1].progress) || 0 : 50}%`}}>
@@ -181,8 +180,8 @@ export default function SEP() {
                         </CarouselItem>
                     ))}
                     </CarouselContent>
-                <CarouselPrevious className="absolute left-3 top-[86%] sm:top-1/2 -translate-y-1/2 z-10 !bg-black !text-white shadow-md hidden sm:flex"/>
-                <CarouselNext className="absolute right-3 top-[86%] sm:top-1/2 -translate-y-1/2 z-10 !text-white !bg-black shadow-md hidden sm:flex"/>
+                <CarouselPrevious className="absolute left-3 top-[86%] sm:top-1/2 -translate-y-1/2 z-10 picCarouselBtn hidden sm:flex"/>
+                <CarouselNext className="absolute right-3 top-[86%] sm:top-1/2 -translate-y-1/2 z-10 picCarouselBtn hidden sm:flex"/>
             </Carousel>
         </div>
     )

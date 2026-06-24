@@ -99,6 +99,29 @@ a:hover {
   color: var(--background);
 }
 
+.picCarouselBtn {
+  background-color: var(--pic-carousel-btn-bg);
+  color: var(--pic-carousel-btn-clr);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.picCarouselBtn:hover {
+  background-color: var(--pic-carousel-btn-bg-hover);
+}
+
+.travelTabBg {
+  background-color: var(--travel-tab-bg);
+}
+
+.travelTabBtn {
+  background-color: var(--travel-tab-btn);
+}
+
+.travelTabBtn[data-state="active"] {
+  background-color: var(--travel-tab-btn-selected);
+  color: var(--travel-tab-btn-selected-text);
+}
+
 /*---break---*/
 
 @theme inline {
@@ -170,6 +193,15 @@ a:hover {
   --ring: oklch(0.708 0 0);
 
   --base-header-footer: oklch(0.145 0 0);
+
+  --pic-carousel-btn-bg: oklch(0 0 0 / 0.8);
+  --pic-carousel-btn-bg-hover: oklch(0 0 0);
+  --pic-carousel-btn-clr: oklch(1 0 0);
+
+  --travel-tab-bg: oklch(0.85 0 0);
+  --travel-tab-btn: oklch(0.93 0 0);
+  --travel-tab-btn-selected: oklch(0.2 0 0);
+  --travel-tab-btn-selected-text: oklch(1 0 0);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -200,6 +232,15 @@ a:hover {
     --ring: oklch(0.556 0 0);
 
     --base-header-footer: oklch(0.556 0 0);
+
+    --pic-carousel-btn-bg: oklch(1 0 0 / 0.7);
+    --pic-carousel-btn-bg-hover: oklch(1 0 0);
+    --pic-carousel-btn-clr: oklch(0 0 0);
+
+    --travel-tab-bg: oklch(0.4 0 0);
+    --travel-tab-btn: oklch(0.55 0 0);
+    --travel-tab-btn-selected: oklch(0.9 0 0);
+    --travel-tab-btn-selected-text: oklch(0 0 0);
   }
 }
 

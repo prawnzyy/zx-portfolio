@@ -140,6 +140,14 @@ function GradJapanPage() {
   const jumpTargetRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement | null>(null);
   const [loading, setLoading] = useState(true);
+  
+  const tabs: Record<string, string> = {
+    JP13 : "Tokyo",
+    JP21 : "Gujo",
+    JP26 : "Kyoto",
+    JP34 : "Hiroshima",
+    JP38 : "Ehime",
+  }
 
   const paths: Record<string, MapData> = {
     JP13 : {name : "Tokyo", time_period: "8-12 May", description: ["Mt Takao", "Enoshima", "Akihabara"], imageSrc: MapTokyo},
@@ -430,22 +438,12 @@ function GradJapanPage() {
     </div>
     <div className="mt-5 self-start w-full scroll-mt-20" ref={jumpTargetRef}>
       <Tabs defaultValue="JP13" value={selected} onValueChange={setSelected}>
-        <TabsList className="md:hidden flex flex-wrap self-center h-auto gap-1 bg-[#787276]">
-          <TabsTrigger value="JP13">
-            Tokyo
-          </TabsTrigger>
-          <TabsTrigger value="JP21">
-            Gujo
-          </TabsTrigger>
-          <TabsTrigger value="JP26">
-            Kyoto
-          </TabsTrigger>
-          <TabsTrigger value="JP34">
-            Hiroshima
-          </TabsTrigger>
-          <TabsTrigger value="JP38">
-            Ehime
-          </TabsTrigger>
+        <TabsList className="md:hidden flex flex-wrap self-center h-auto gap-1 travelTabBg">
+          {Object.entries(tabs).map(([key, value]) => (
+            <TabsTrigger value={key} className="travelTabBtn">
+              {value}
+            </TabsTrigger>
+          ))}
         </TabsList>
         {selected === "" && (
           <div className="flex flex-row gap-2 self-center md:hidden">

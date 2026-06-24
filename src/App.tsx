@@ -8,11 +8,12 @@ import TravelsPage from './pages/TravelsPage.tsx';
 import Japan1 from './pages/Japan1.tsx';
 import SEP from '@/pages/SEP.tsx';
 import GradJapanPage from '@/pages/GradJapan.tsx';
+import GradChinaPage from './pages/GradChina.tsx';
+import Japan2 from './pages/Japan2.tsx';
 
 import NotFoundPage from './pages/NotFoundPage.tsx'; // Your 404 page
 
 import './App.css'
-import Japan2 from './pages/Japan2.tsx';
 
 const router = createHashRouter([
   {
@@ -38,6 +39,10 @@ const router = createHashRouter([
           {
             index: true,
             element: <TravelsPage />
+          },
+          {
+            path: 'jun-2026',
+            element: <GradChinaPage />
           },
           {
             path: 'may-2026',

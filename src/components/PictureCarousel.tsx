@@ -22,8 +22,8 @@ function PictureCarousel({images=[], forBlog=false} : PictureCarouselProps) {
                     </CarouselItem>
                 ))}
             </CarouselContent>
-            <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white shadow-md" />
-            <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-white shadow-md" />
+            <CarouselPrevious className="absolute left-2 top-1/2 -translate-y-1/2 z-10 picCarouselBtn" />
+            <CarouselNext className="absolute right-2 top-1/2 -translate-y-1/2 z-10 picCarouselBtn" />
         </Carousel>
     );
 }
